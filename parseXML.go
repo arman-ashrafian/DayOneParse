@@ -66,7 +66,10 @@ func main() {
 		entries = append(entries, createEntry(file.Name()))
 	}
 
+	staticPhotos := http.FileServer(http.Dir("photos"))
+
 	http.HandleFunc("/", indexHandler)
+	http.Handle("/photos/", http.StripPrefix("/photos/", staticPhotos))
 	http.ListenAndServe(":8080", nil)
 }
 

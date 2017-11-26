@@ -8,9 +8,9 @@
 	<div id="entries">
 		
 		{{ range .Entries }}
-			<h3><strong>{{ .Photo }}</strong></h3>
-			<h3><strong>{{ .Date }}</strong></h3>
+			<h3>{{ .Date }}</h3>
 			<h3>{{ .Content }}</h3>
+			<img src="photos/{{ .Photo }}">
 
 		{{ end }}
 
