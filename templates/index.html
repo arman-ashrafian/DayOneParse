@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Day One Entries</title>
+</head>
+<body>
+
+	<div id="entries">
+		
+		{{ range .Entries }}
+			<h3><strong>{{ .Photo }}</strong></h3>
+			<h3><strong>{{ .Date }}</strong></h3>
+			<h3>{{ .Content }}</h3>
+
+		{{ end }}
+
+		<br><br><br>
+
+	</div>
+
+</body>
+</html>
