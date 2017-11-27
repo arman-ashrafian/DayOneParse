@@ -12,8 +12,13 @@
 		}
 
 		img {
-			height: 300px;
-			max-width: 400px;
+			height: 500px;
+			max-width: 75%;
+		}
+
+		#entries {
+			padding: 20px;
+			background-color: lightgrey;
 		}
 
 	</style>
@@ -27,7 +32,9 @@
 		{{ range .Entries }}
 			<h3>{{ .Date }}</h3>
 			<h3>{{ .Content }}</h3>
-			<img src="photos/{{ .Photo }}">
+			<a href="photos/{{ .Photo }}">
+				<img src="photos/{{ .Photo }}">
+			</a>
 
 		{{ end }}
 
